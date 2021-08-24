@@ -4,6 +4,7 @@
   "description": "Nuestro primer poriyecto de NodeJS",
   "main": "index.html",
   "scripts": {
+    "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/alandelac/MiPortafolio/issues"
   },
-  "homepage": "https://github.com/alandelac/MiPortafolio#readme"
+  "homepage": "https://github.com/alandelac/MiPortafolio#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
