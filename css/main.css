@@ -1,0 +1,58 @@
+.jumbotron{
+    background-color: rgba(102, 71, 14, 0.644);
+    color: rgb(250, 250, 250);
+}
+
+footer{
+    padding: 10px 10px 10px;
+    background-color: rgba(102, 71, 14, 0.644);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: rgb(250, 250, 250);
+}
+
+body{
+    background-color: rgb(175, 157, 130);
+    
+}
+
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+.footer{
+    flex: 1 50%;
+}
+
+.box--end {
+    margin-left: auto;
+  }
+  
+.btn{
+    background-color: rgba(102, 71, 14, 0.644);
+    width: 75%;
+    color: rgb(255, 255, 255);
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+}
+
+.Titulos{
+    flex: 1 33% ;
+    padding: 5px 15px 5px 15px;
+}
+
+h3{
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+    margin-bottom: 4px;
+}
+
+.ProjectType{
+    flex:1 25%;
+    padding: 5px 11px 5px 11px;
+}
