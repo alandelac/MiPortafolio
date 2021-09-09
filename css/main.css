@@ -1,23 +1,25 @@
 .jumbotron{
-    background-color: rgba(102, 71, 14, 0.644);
+    background-color: rgb(4, 130, 161);
     color: rgb(250, 250, 250);
+    margin-top: 55px;
 }
 
 footer{
     padding: 10px 10px 10px;
-    background-color: rgba(102, 71, 14, 0.644);
-    margin-bottom: 0px;
+    background-color: rgb(4, 130, 161);
+    margin-bottom:auto;
     margin-top: 10px;
     color: rgb(250, 250, 250);
+
 }
 
 body{
-    background-color: rgb(175, 157, 130);
+    background-color: rgb(143, 207, 226);
     
 }
 
 a{
-    color: rgb(255, 255, 255);
+    
     text-decoration: none;
     
 }
@@ -31,7 +33,7 @@ a{
   }
   
 .btn{
-    background-color: rgba(102, 71, 14, 0.644);
+    background-color: rgb(4, 130, 161);
     width: 75%;
     color: rgb(255, 255, 255);
     margin-left: 12.5%;
