@@ -18,7 +18,11 @@ body{
     
 }
 
-
+.responsive {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
 
 a{
     
@@ -34,7 +38,6 @@ a{
     margin-left: auto;
   }
   
-
 
 .Titulos{
     flex: 1 33% ;

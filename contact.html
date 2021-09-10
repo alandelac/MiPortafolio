@@ -17,7 +17,7 @@
 <body style="background-color: rgba(var(--bs-dark-rgb)); color: rgb(255, 255, 255);">
 
     <!--Esto de aqui es mi barra de navegacion-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="./index.html">ALAN</a>
 
@@ -48,44 +48,59 @@
     </nav>
 
     <!--El encabezado de mi pagina-->
-    <div class="jumbotron jumbotron-fluid bg-black mt-auto">
+    <div style="padding-top: 60px;" class="jumbotron jumbotron-fluid bg-black mt-auto">
 
-        <p style="text-align: center; padding-top: 15px;"><img
-                style="border-radius: 50%; max-width: 200px;width: 100%;height: auto;" src="./imagenes/perfil.png"
-                class="responsive" alt="Alan de la Cruz"></p>
+        <p style="text-align: center; padding-top: 15px;">
+            <img style="border-radius: 50%;" class="responsive" src="./imagenes/perfil.png"
+                 alt="Alan de la Cruz">
+        </p>
         <h1 class="display-4 text-center">Alán de la Cruz</h1>
 
     </div>
-    <div>
-        <br>
-    </div>
+    
     <div class="container-fluid">
-        <h1 class="text-center">Student, programmer, youtuber</h1>
-    </div>
 
+        <div class="d-flex d-row flex-wrap justify-content-evenly">
+            <a style="color: white; font-size: 80px;"class="btn" href="https://www.instagram.com/alan_delac/ac" target="_blank">
+                <i  class="bi bi-instagram sm"></i>
+            </a>
+            <a style="color: white; font-size: 80px;"class="btn" href="https://www.facebook.com/alan.delacruz.520" target="_blank">
+                <i  class="bi bi-facebook"></i>
+            </a>
+            <a style="color: white; font-size: 80px;"class="btn" href="https://youtube.com/c/FixStation" target="_blank">
+                <i  class="bi bi-youtube"></i>
+            </a>
+            <a style="color: white; font-size: 80px;"class="btn" href="https://www.linkedin.com/in/alandelacruztellez/" target="_blank">
+                <i  class="bi bi-linkedin"></i>
+            </a>
+            <a style="color: white; font-size: 80px;"class="btn" href="https://github.com/alandelac" target="_blank">
+                <i  class="bi bi-github"></i>
+            </a>
+        </div>
+    </div>
+<br><br>
 
     <form style="padding-left: 10%; padding-right: 10%; padding-bottom: 30px;">
         <h1>Dejame tu comentario</h1>
         <div class="row">
             <div class="form-group col-sm-6">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                <label for="firstName">First Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Write your first name">
             </div>
             <div class="form-group col-sm-6">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Write your last name">
             </div>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="correo"
-                placeholder="Ingrese su correo">
+            <input type="text" class="form-control" id="email" placeholder="Write your email">
         </div>
         <div class="form-group">
-            <label for="email">Comentario</label>
-            <textarea type="text" class="form-control" id="correo" rows="10"></textarea>
+            <label for="comment">Comment</label>
+            <textarea type="text" class="form-control" id="comment" rows="10" placeholder="Write your comment"></textarea>
         </div>
-        <button style="margin-top: 15px;" type="submit" class= "btn btn-outline-light">Enviar</button>
+        <button style="margin-top: 15px;" type="submit" class="btn btn-outline-light">Enviar</button>
     </form>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
