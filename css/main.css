@@ -18,6 +18,8 @@ body{
     
 }
 
+
+
 a{
     
     text-decoration: none;
@@ -32,13 +34,7 @@ a{
     margin-left: auto;
   }
   
-.btn{
-    background-color: rgb(4, 130, 161);
-    width: 75%;
-    color: rgb(255, 255, 255);
-    margin-left: 12.5%;
-    margin-right: 12.5%;
-}
+
 
 .Titulos{
     flex: 1 33% ;

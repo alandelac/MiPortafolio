@@ -9,136 +9,59 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
     <title>Alan de la Cruz</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="./index.html">
-            Alan
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link" href="./videos.html">Videos</a></li>
-                <li class="nav-item"><a class="nav-link" href="./proyectos.html">Proyectos</a></li>
-            </ul>
-        </div>
+<body style="background-color: rgba(var(--bs-dark-rgb)); color: rgb(255, 255, 255);">
+
+    <!--Esto de aqui es mi barra de navegacion-->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">ALAN</a>
+
+            <!--El boton de colpasar-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                <div></div>
+                <!--centro de la barra de navegacion-->
+                <div class="navbar-nav text-end">
+                    <a class="nav-link" href="./videos.html">Videos</a>
+                    <a class="nav-link" href="./projects.html">Projects</a>
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                    <a class="nav-link" href="./playground.html">Playground</a>
+                </div>
+                <!--final de la barra-->
+                <div class="navbar-nav text-end">
+                    <a class="nav-link" href="https://github.com/alandelac" target="_blank"><i
+                            class="bi bi-github"></i></a>
+                    <a class="nav-link" href="https://youtube.com/c/FixStation" target="_blank"><i
+                            class="bi bi-youtube"></i></a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/alandelacruztellez/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
     </nav>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-           
-            <h1 class="display-4">Alan de la Cruz' Portafolio</h1>
-            <p class="lead">Welcome to my page</p>
-        </div>
-    </div>
 
-    <div class="container">
-        <nav aria-label="breadcrumb">
-            <ol class = "breadcrumb">
-                <li class="breadcrumb-item active">
-                    <a class= "bg-black bg-opacity-25 text-black"href = "./index.html">Home
-                    </a>
-                </li>
-            </ol>
-        </nav>
-        <div class="d-flex flex-row flex-wrap ">
-            <div class="Titulos">
-                <h3>Who am I?</h3>
-                <p>My name is Alan de la Cruz. I'm a programmer, runner and student. I hope to develop something to make
-                    a positive impact on a lot of people</p>
-            </div>
-            <div class="Titulos">
-                <h3>What is this?</h3>
-                <p>This is my first web page I develop from 0 using HTML, CSS, and other stuff I don't understand yet. I
-                    will use this page as my Portafolio and to practice coding</p>
-            </div>
-            <div class="Titulos">
-                <h3>Last project I participate?</h3>
-                <p>I'm currently managing 2 projects. I'm organizing a series of talks to my college community about
-                    leadership skills. The other thing is a triple Hackaton for students</p>
-            </div>
+    <!--El encabezado de mi pagina-->
+    <div class="jumbotron jumbotron-fluid bg-black mt-auto">
 
-
-        </div>
-        <div class="d-flex flex-wrap flex-row ">
-            <div class="ProjectType d-flex flex-column justify-content-between">
-                <div>
-                    <h3>Courses</h3>
-                    <p class="text-center">Courses I had taken and what I learned from them</p>
-                </div>
-                <a href="http://www.youtube.com/c/FixStation" class="btn btn-primary">Courses</a>
-            </div>
-
-
-            <div class="ProjectType d-flex flex-column justify-content-between">
-                <div>
-                    <h3>Java</h3>
-                    <p class="text-center">Projects made with Java</p>
-                </div>
-                <div>
-                    <a href="http://www.youtube.com/c/FixStation" class="btn">Java</a>
-                </div>
-            </div>
-            <div class="ProjectType d-flex flex-column justify-content-between">
-
-                <h3>C++</h3>
-                <p class="text-center">Projects made with C++</p>
-                <a href="http://www.youtube.com/c/FixStation" class="btn btn-primary">C++</a>
-            </div>
-            <div class="ProjectType d-flex flex-column justify-content-between">
-
-                <h3>C#</h3>
-                <p class="text-center">Projects made with C#</p>
-                <a href="http://www.youtube.com/c/FixStation" class="btn btn-primary">C#</a>
-            </div>
-            <div class="ProjectType d-flex flex-column justify-content-between">
-
-                <h3>Arduino</h3>
-                <p class="text-center">Projects made with Arduino</p>
-                <a href="http://www.youtube.com/c/FixStation" class="btn btn-primary">Arduino</a>
-            </div>
-            <div class="ProjectType d-flex flex-column justify-content-between">
-
-                <h3>Non-programming projects</h3>
-                <p class="text-center">non-programming projects I made alone or with a team</p>
-                <a href="http://www.youtube.com/c/FixStation" class="btn btn-primary">Non-programming projects</a>
-            </div>
-            <div class="ProjectType d-flex flex-column justify-content-between">
-
-                <h3>Contests</h3>
-                <p class="text-center">Contests I had particpated and what I achieved</p>
-                <a href="http://www.youtube.com/c/FixStation" class="btn btn-primary">Contests</a>
-            </div>
-
-        </div>
+        <p style="text-align: center; padding-top: 15px;"><img style="border-radius: 50%; max-width: 200px;width: 100%;height: auto;" src="./imagenes/perfil.png" class="responsive"
+                alt="Alan de la Cruz" ></p>
+        <h1 class="display-4 text-center">Alán de la Cruz</h1>
 
     </div>
-
-    <footer>
-        <div class="d-flex flex-row flex-wrap">
-            <div class="d-flex flex-column">
-                <a href="http://www.youtube.com/c/FixStation">YouTube</a>
-                <a href="http://www.instagram.com/alan_delac">Instagram</a>
-                <a href="https://github.com/alandelac">Github</a>
-            </div>
-            <div class="d-flex align-self-end box--end">
-                <address>
-                    <p class="text-end">Monterrey, Nuevo Leon, Mexico</p>
-                    <p class="text-end">+52 8112 2073 52</p>
-                    <p class="text-end">alan09delacruz@gmail.com</p>
-                </address>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
+    <div>
+      <br>       
+      </div>
+    <div class="container-fluid">
+        <h1 class="text-center">Student, programmer, youtuber</h1>
+    </div>
+    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
