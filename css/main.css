@@ -7,3 +7,14 @@
 p{
     color: white;
 }
+
+p.centerVideo{
+    text-align: center;
+
+}
+div.inicio{
+    text-align: center;
+}
+iframe{
+    margin: 10px auto 10px auto;
+}
