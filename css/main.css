@@ -10,11 +10,16 @@ p{
 
 p.centerVideo{
     text-align: center;
-
+    width: 33%;
+    height: auto;
 }
 div.inicio{
     text-align: center;
 }
 iframe{
     margin: 10px auto 10px auto;
+    width: 33%;
+    max-width: 300px;
+    height: auto;
+
 }
