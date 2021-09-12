@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
-    <title>Videos</title>
+    <title>Projects</title>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
                 <div></div>
                 <!--centro de la barra de navegacion-->
                 <div class="navbar-nav text-end">
-                    <a class="nav-link active" aria-current="page" href="./videos.html">Videos</a>
-                    <a class="nav-link" href="./projects.html">Projects</a>
+                    <a class="nav-link" href="./videos.html">Videos</a>
+                    <a class="nav-link active" aria-current="page" href="./projects.html">Projects</a>
                     <a class="nav-link" href="./contact.html">Contact</a>
                     <a class="nav-link disabled" href="./playground.html">Playground</a>
                 </div>
@@ -50,32 +50,43 @@
     <!--El encabezado de mi pagina-->
     <div class="encabezado mb-5">
 
-        <h1 class="display-4 text-center mb-3">Videos</h1>
-        <p class="text-center">Here are my last 9 videos I had made</p>
+        <h1 class="display-4 text-center mb-3">Projects</h1>
+        <p class="text-center">You can find web, game, app, desktop, and non-programming projects I had made</p>
 
     </div>
 
-    <div class="mosaico row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-        <iframe class="latestVideoEmbed" vnum='0' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='1' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='2' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='3' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='4' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='5' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='6' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='7' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed offset-md-3 offset-lg-0" vnum='8' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
-            allowfullscreen></iframe>
+    <nav>
+        <div class="nav nav-tabs nav-fill " id="nav-tab" role="tablist">
+            <a class="nav-link tab text-light bg-dark border-bottom" id="web-tab" data-toggle="tab" href="#web"
+                role="tab" aria-controls="web" aria-selected="true">Web</a>
+            <a class="nav-link active text-light bg-dark border-bottom" id="game-tab" data-toggle="tab" href="#game"
+                role="tab" aria-controls="game" aria-selected="false">Game</a>
+            <a class="nav-link text-light bg-dark border-bottom" id="app-tab" data-toggle="tab" href="#app" role="tab"
+                aria-controls="app" aria-selected="false">App</a>
+            <a class="nav-link text-light bg-dark border-bottom" id="desktop-tab" data-toggle="tab" href="#desktop"
+                role="tab" aria-controls="desktop" aria-selected="false">Desktop</a>
+            <a class="nav-link text-light bg-dark border-bottom" id="noProgram-tab" data-toggle="tab" href="#noProgram"
+                role="tab" aria-controls="noProgram" aria-selected="false">Non-promgramming</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade " id="web" role="tabpanel" aria-labelledby="nav-web-tab">.hola.</div>
+        <div class="tab-pane fade show active" id="game" role="tabpanel" aria-labelledby="nav-game-tab">
+            <div class="mosaico row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-5 text-center">
+                <a href="#" target="_blank">
+                    <img class="fotoJuego"
+                        src="https://play-lh.googleusercontent.com/dbxwjcMymopscucQGHXF0J1C_bsQN3CYkjdCmg8QsSkdVl8_8wO73qTKfWVV8Tkz9GM=s180-rw"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <img class="fotoJuego"
+                        src="/imagenes/gameJamOct2020.png"></i>
+                </a>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="nav-app-tab">hace.</div>
+        <div class="tab-pane fade" id="desktop" role="tabpanel" aria-labelledby="nav-desktop-tab">.hola.</div>
+        <div class="tab-pane fade" id="noProgram" role="tabpanel" aria-labelledby="nav-noProgram-tab">que.</div>
     </div>
-
 
     <!-- Seccion de scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

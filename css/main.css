@@ -28,7 +28,7 @@ div.encabezado{
     margin-bottom: 120px;
 }
 
-.mosaicoDeVideos{
+.mosaico{
     margin:0 10% 0 10%;
 }
 
@@ -44,6 +44,7 @@ div.encabezado{
     padding-right: 10%;
     padding-bottom: 30px;
 }
+
 
 iframe{
     padding: 10px 10px 10px 10px;
@@ -61,4 +62,13 @@ iframe{
 body{
     background-color: rgba(var(--bs-dark-rgb));
     color: white;
+}
+
+.fotoJuego{
+    border-radius: 50%;
+    max-width: 200px;
+    min-width: 150px;
+    width: 100%;
+    height: auto;
+    margin: 10px 10px;
 }
