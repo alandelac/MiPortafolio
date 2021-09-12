@@ -28,11 +28,27 @@ div.encabezado{
     margin-bottom: 120px;
 }
 
+.mosaicoDeVideos{
+    margin:0 10% 0 10%;
+}
+
+.textoContacto{
+    font-size: 20px;
+    padding: 0 20% 0 20%;
+    text-align:justify;
+}
+
+.dejaTuComentario{
+    margin-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 30px;
+}
+
 iframe{
-    margin: 10px auto 10px auto;
-    width: 70%;
-    max-width: 300px;
-    height: auto;
+    padding: 10px 10px 10px 10px;
+    
+    max-width: 100px;
 }
 
 .fotoDePerfil{

@@ -14,7 +14,7 @@
     <title>Videos</title>
 </head>
 
-<body style="background-color: rgba(var(--bs-dark-rgb)); color: rgb(255, 255, 255);">
+<body>
 
     <!--Esto de aqui es mi barra de navegacion-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -48,15 +48,14 @@
     </nav>
 
     <!--El encabezado de mi pagina-->
-    <div style="padding-top: 60px;" class="jumbotron jumbotron-fluid bg-black mt-auto">
+    <div class="encabezado mb-5">
 
-        <h1 class="display-4 text-center">Videos</h1>
+        <h1 class="display-4 text-center mb-3">Videos</h1>
         <p class="text-center">Here are my last 9 videos I had made</p>
-        <br>
 
     </div>
 
-    <div style="margin:0 10% 0 10%;" class="d-flex flex-row flex-wrap">
+    <div class="mosaicoDeVideos row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
         <iframe class="latestVideoEmbed" vnum='0' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
             allowfullscreen></iframe>
         <iframe class="latestVideoEmbed" vnum='1' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
@@ -73,7 +72,7 @@
             allowfullscreen></iframe>
         <iframe class="latestVideoEmbed" vnum='7' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
             allowfullscreen></iframe>
-        <iframe class="latestVideoEmbed" vnum='8' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
+        <iframe class="latestVideoEmbed offset-md-3 offset-lg-0" vnum='8' cid="UCuMLPw3QWXviZselWzHuXhg" frameborder="0"
             allowfullscreen></iframe>
     </div>
 
