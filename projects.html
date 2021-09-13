@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="./bootstrap-icons/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
     <title>Projects</title>
 </head>
 
@@ -59,7 +59,7 @@
         <div class="nav nav-tabs nav-fill " id="nav-tab" role="tablist">
             <a class="nav-link tab text-light bg-dark border-bottom" id="web-tab" data-toggle="tab" href="#web"
                 role="tab" aria-controls="web" aria-selected="true">Web</a>
-            <a class="nav-link active text-light bg-dark border-bottom" id="game-tab" data-toggle="tab" href="#game"
+            <a class="nav-link active text-dark bg-light border-bottom" id="game-tab" data-toggle="tab" href="#game"
                 role="tab" aria-controls="game" aria-selected="false">Game</a>
             <a class="nav-link text-light bg-dark border-bottom" id="app-tab" data-toggle="tab" href="#app" role="tab"
                 aria-controls="app" aria-selected="false">App</a>
@@ -73,19 +73,60 @@
         <div class="tab-pane fade " id="web" role="tabpanel" aria-labelledby="nav-web-tab">.hola.</div>
         <div class="tab-pane fade show active" id="game" role="tabpanel" aria-labelledby="nav-game-tab">
             <div class="mosaico row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-5 text-center">
-                <a href="#" target="_blank">
-                    <img class="fotoJuego"
+                <a data-toggle="modal" href="#ninjaSurvivorModal" id="ninjaSurvivorBtn">
+                    <img class="fotoJuego" id="ninjaSurvivorBtnImage"
                         src="https://play-lh.googleusercontent.com/dbxwjcMymopscucQGHXF0J1C_bsQN3CYkjdCmg8QsSkdVl8_8wO73qTKfWVV8Tkz9GM=s180-rw"></i>
                 </a>
-                <a href="#" target="_blank">
-                    <img class="fotoJuego"
-                        src="/imagenes/gameJamOct2020.png"></i>
+                <a href="#gameJamOct2020Modal" data-toggle="modal">
+                    <img class="fotoJuego" src="/imagenes/gameJamOct2020.png"></i>
                 </a>
             </div>
         </div>
         <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="nav-app-tab">hace.</div>
         <div class="tab-pane fade" id="desktop" role="tabpanel" aria-labelledby="nav-desktop-tab">.hola.</div>
         <div class="tab-pane fade" id="noProgram" role="tabpanel" aria-labelledby="nav-noProgram-tab">que.</div>
+    </div>
+
+    <!-- Game modals: Ninja Survivor -->
+    <div id="ninjaSurvivorModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title text-black">Ninja Survivor</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-black">
+                    Nija survivor is my first ever videogame made. It is a mobile game that consist of and endless
+                    platform game where you need to collect coins in order to buy new skins to play with.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game modals: Game Jam October 2020 -->
+    <div id="gameJamOct2020Modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title text-black">Game Jam October 2020</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body text-black">
+                    This game is for laptop and desktop, it is a 2-D shooter game, where you need to survive 4 days by
+                    killing the monsters. It is a really though game.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Seccion de scripts -->
@@ -98,24 +139,58 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-        var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
-        function loadVideo(iframe) {
-            $.getJSON(reqURL + iframe.getAttribute('cid'),
-                function (data) {
-                    var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
-                    console.log(videoNumber);
-                    var link = data.items[videoNumber].link;
-                    id = link.substr(link.indexOf("=") + 1);
-                    iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
-                }
-            );
-        }
-        var iframes = document.getElementsByClassName('latestVideoEmbed');
-        for (var i = 0, len = iframes.length; i < len; i++) {
-            loadVideo(iframes[i]);
-        }
+        $(function () {
+
+            $('#ninjaSurvivorModal').on('show.bs.modal', function (e) {
+
+                $('#ninjaSurvivorBtnImage').addClass('opacity-50');
+
+            });
+
+            $('#ninjaSurvivorModal').on('hidden.bs.modal', function (e) {
+
+                $('#ninjaSurvivorBtnImage').removeClass('opacity-50');
+            
+            });
+
+            $("#web-tab").on('show.bs.tab', function(e){
+                $("#web-tab").removeClass('bg-dark text-light');
+            });
+            $("#web-tab").on('hide.bs.tab', function(e){
+                $("#web-tab").addClass('bg-dark text-light');
+            });
+            
+            $("#game-tab").on('show.bs.tab', function(e){
+                $("#game-tab").removeClass('bg-dark text-light');
+            });
+            $("#game-tab").on('hide.bs.tab', function(e){
+                $("#game-tab").removeClass('bg-light text-dark');
+                $("#game-tab").addClass('bg-dark text-light');
+            });
+
+            $("#app-tab").on('show.bs.tab', function(e){
+                $("#app-tab").removeClass('bg-dark text-light');
+            });
+            $("#app-tab").on('hide.bs.tab', function(e){
+                $("#app-tab").addClass('bg-dark text-light');
+            });
+
+            $("#desktop-tab").on('show.bs.tab', function(e){
+                $("#desktop-tab").removeClass('bg-dark text-light');
+            });
+            $("#desktop-tab").on('hide.bs.tab', function(e){
+                $("#desktop-tab").addClass('bg-dark text-light');
+            });
+
+            $("#noProgram-tab").on('show.bs.tab', function(e){
+                $("#noProgram-tab").removeClass('bg-dark text-light');
+            });
+            $("#noProgram-tab").on('hide.bs.tab', function(e){
+                $("#noProgram-tab").addClass('bg-dark text-light');
+            });
+
+        });
     </script>
 </body>
 
