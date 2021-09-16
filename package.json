@@ -5,8 +5,14 @@
   "main": "index.html",
   "scripts": {
     "dev": "lite-server",
+    "start": "concurrently \"npm run watch:scss\" \"npm run dev\" ",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* --out-dir dist/images",
+    "usemin": "usemin index.html -d dist -o dist/index.html --htmlmin && usemin contact.html -d dist -o dist/contact.html --htmlmin && usemin playground.html -d dist -o dist/playground.html --htmlmin && usemin projects.html -d dist -o dist/projects.html --htmlmin && usemin videos.html -d dist -o dist/videos.html --htmlmin",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -19,13 +25,35 @@
   },
   "homepage": "https://github.com/alandelac/MiPortafolio#readme",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "cssmin": "^0.4.3",
+    "grunt": "^1.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-filerev": "^2.3.1",
+    "grunt-usemin": "^3.1.1",
+    "htmlmin": "^0.0.7",
+    "jit-grunt": "^0.10.0",
     "lite-server": "^2.6.1",
-    "node-sass": "^6.0.1"
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "time-grunt": "^2.0.0",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",
     "bootstrap": "^5.1.0",
     "bootstrap-icons": "^1.5.0",
+    "concurrently": "^6.2.1",
     "jquery": "^3.6.0",
     "node": "^16.9.1",
     "popper.js": "^1.16.1"

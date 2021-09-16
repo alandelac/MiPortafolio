@@ -9,11 +9,11 @@ p{
 }
 
 h1.inicio{
-    @include margen(0, 20%, 25px, 20%);
+    margin:0 20% 25px 20%;
 }
 
 .textoSencillo{
-    @include margen(0, 20%, 45px, 20%);
+    margin:0 20% 45px 20%;
     text-align: justify;
 }
 
