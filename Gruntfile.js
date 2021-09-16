@@ -65,9 +65,9 @@ module.exports = function (grunt) {
                 files:[{
                     expand:true,
                     dot: true,
-                    cwd: 'node_modules/bootstrap-icons/font',
-                    src:['fonts/*.*'],
-                    dest:'dist'
+                    cwd: 'node_modules/bootstrap-icons',
+                    src:['**'],
+                    dest:'dist/bootsrap-icons'
                 }]
             }
         },
@@ -154,7 +154,6 @@ module.exports = function (grunt) {
         'copy',
         'imagemin',
         'useminPrepare',
-        'concat',
         'cssmin',
         'uglify',
         'filerev',
