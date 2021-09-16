@@ -13,3 +13,11 @@ node_modules/bootstrap/dist/*
 !node_modules/bootstrap/dist/css
 node_modules/bootstrap/dist/css/*
 !node_modules/bootstrap/dist/css/bootstrap.min.css
+
+!node_modules/popper.js
+node_modules/popper.js/*
+!node_modules/popper.js/dist
+node_modules/popper.js/dist/*
+!node_modules/popper.js/dist/umd
+node_modules/popper.js/dist/umd/*
+!node_modules/popper.js/dist/umd/popper.min.js
